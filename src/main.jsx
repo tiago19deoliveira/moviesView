@@ -6,17 +6,16 @@ import App from "./App.jsx";
 import Home from "./pages/Home.jsx";
 import Movie from "./pages/Movie.jsx";
 import Search from "./pages/Search.jsx";
-import Navbar from "./components/Navbar.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route element={<App />}></Route>
-        <Route path="/" element={<Navbar />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/movie:id" element={<Movie />} />
-        <Route path="/search" element={<Search />} />
+        <Route element={<App />}>
+          <Route path="/" element={<Home />} />
+          <Route path="movie/:id" element={<Movie />} />
+          <Route path="search" element={<Search />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   </StrictMode>
