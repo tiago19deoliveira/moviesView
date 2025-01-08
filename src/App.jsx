@@ -1,13 +1,13 @@
+import Navbar from "./components/Navbar";
 import "./App.css";
-import { Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <nav id="navbar">
-        <h2>
-          <Link to="/">Movies list</Link>
-        </h2>
-      </nav>
+      <Navbar />
+      <h2>Super Movies Lib</h2>
+
+      <Outlet />
     </div>
   );
 }
