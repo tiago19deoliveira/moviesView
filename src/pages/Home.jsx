@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
 import MoviesCard from "../components/MoviesCard";
+import './MoviesGrid.css'
+
 
 const apiKey = import.meta.env.VITE_API_KEY;
 const moviesURL = import.meta.env.VITE_API;
